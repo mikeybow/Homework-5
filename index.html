@@ -17,57 +17,57 @@
             <div class="hour">
                 <label>9:00 A.M</label>     
                 
-                <textarea class="userInput"></textarea>
-                    <button class="saveBtn">Save</button>
+                <textarea id="9amtext" class="userInput"></textarea>
+                    <button id="9am" class="saveBtn">Save</button>
             </div>
 
             <div class="hour">
                 <label>10:00 A.M</label>    
                 
-                <textarea class="userInput"></textarea>
-                    <button class="saveBtn">Save</button>
+                <textarea id="10amtext" class="userInput"></textarea>
+                    <button id="10am" class="saveBtn">Save</button>
             </div>
 
                 <div class="hour">
                 <label>11:00 A.M</label>    
                 
-                    <textarea class="userInput"></textarea>
-                        <button class="saveBtn">Save</button>
+                    <textarea id="11amtext" class="userInput"></textarea>
+                        <button id="11am" class="saveBtn">Save</button>
                 </div>
 
                 <div class="hour">
                 <label>12:00 P.M</label>    
-                    <textarea class="userInput"></textarea>
-                        <button class="saveBtn">Save</button>
+                    <textarea id="12pmtext" class="userInput"></textarea>
+                        <button id="12pm" class="saveBtn">Save</button>
                 </div>
                 <div class="hour">
                 <label>1:00 P.M</label>     
-                    <textarea class="userInput"></textarea>
-                        <button class="saveBtn">Save</button>
+                    <textarea id="1pmtext" class="userInput"></textarea>
+                        <button id="1pm" class="saveBtn">Save</button>
                 </div>
 
                 <div class="hour">
                 <label>2:00 P.M</label>     
-                    <textarea class="userInput"></textarea>
-                        <button class="saveBtn">Save</button>
+                    <textarea id="2pmtext" class="userInput"></textarea>
+                        <button id="2pm" class="saveBtn">Save</button>
                 </div>
 
                 <div class="hour">
                 <label>3:00 P.M</label>     
-                    <textarea class="userInput"></textarea>
-                        <button class="saveBtn">Save</button>
+                    <textarea id="3pmtext" class="userInput"></textarea>
+                        <button id="3pm" class="saveBtn">Save</button>
                 </div>
 
                 <div class="hour">
                 <label>4:00 P.M</label>     
-                    <textarea class="userInput"></textarea>
-                        <button class="saveBtn">Save</button>
+                    <textarea id="4pmtext" class="userInput"></textarea>
+                        <button id="4pm" class="saveBtn">Save</button>
                 </div>
 
                 <div class="hour">
                 <label>5:00 P.M</label>     
-                    <textarea class="userInput"></textarea>
-                        <button class="saveBtn">Save</button>
+                    <textarea id="5pmtext" class="userInput"></textarea>
+                        <button id="5pm" class="saveBtn">Save</button>
                 </div>
 
             </div>
@@ -81,25 +81,27 @@
         var daily = document.getElementsByClassName('userInput');
 
         $(".saveBtn").on("click", function(){
-            var inputKey = $('.saveBtn').val();
-            var inputValue = $('.userInput').val();
-            var key
+            this.id
+            console.log(this)
 
-            if (key && value) {
-            localStorage.setItem = ('key', 'value');
-            localStorage.getItem = ('key');
-            console.log(localStorage);
-            console.log(key);
-            console.log(value);
-        }
-            for(var i = 0; i < localStorage.length; i++) {
-                const key = localStorage.key(i);
-                const value = localStorage.getItem(key);
+             //var inputValue = $('.userInput').val();
+             //console.log(inputValue)
+            
+             //if (inputKey && inputValue) {
+                // localStorage.setItem ('key', 'value');
+                // localStorage.getItem ('key');
+                 //console.log(localStorage);
+                 //console.log(key);
+                 //console.log(value);
+             //}
+             //for(var i = 0; i < localStorage.length; i++) {
+                 //const key = localStorage.key(i);
+                 //const value = localStorage.getItem(key);
 
-                inputValue.innerHTML += '${key}: ${value}';
-                console.log(key)
-            }
-        });
+                 //inputValue.innerHTML += '${key}: ${value}';
+                 //console.log(key)
+             //}
+        //});
          console.log(moment())
 
          let m = moment();
