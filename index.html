@@ -81,45 +81,52 @@
         var daily = document.getElementsByClassName('userInput');
 
         $(".saveBtn").on("click", function(){
-            this.id
+            //this.id
             console.log(this)
 
-            switch (this.id().getVal()) {
-                case 0:
-                    input = "9amtext";
-                    break;
-                case 1:
-                    input = "10amtext";
-                    break;
-                case 2:
-                    input = "11amtext";
-                    break;
-                case 3:
-                    input = "12pmtext";
-                    break;
-                case 4:
-                    input = "1pmtext";
-                    break;
-                case 5:
-                    input = "2pmtext";
-                    break;
-                case 6:
-                    input = "3pmtext";
-                    break;
-                case 7:
-                    input = "4pmtext";
-                    break;
-                case 8:
-                    input = "5pmtext";
-                    break;
-            }
+            // Was trying to use a switch case to run through everything but couldn't get the localStorage to function
+
+            //var userInput = ("").val
+
+            //switch ((this.id)) {
+                //case 0:
+                    //input = "9amtext";
+                    //break;
+                //case 1:
+                    //input = "10amtext";
+                    //break;
+                //case 2:
+                    //input = "11amtext";
+                    //break;
+                //case 3:
+                    //input = "12pmtext";
+                    //break;
+                //case 4:
+                    //input = "1pmtext";
+                    //break;
+                //case 5:
+                    //input = "2pmtext";
+                    //break;
+                //case 6:
+                    //input = "3pmtext";
+                    //break;
+                //case 7:
+                    //input = "4pmtext";
+                    //break;
+                //case 8:
+                    //input = "5pmtext";
+                    //break;
+            //}
+
+                // I couldn't figure out how to save everything in the localStorage or to keep the infomation to save even after closed or refreshed
 
              //var inputValue = $('.userInput').val();
-             //console.log(inputValue)
-            
+             //console.log(inputValue);
+            //var inputKey = inputValue.val
+            //console.log(inputKey);
              //if (inputKey && inputValue) {
-                // localStorage.setItem ('key', 'value');
-                // localStorage.getItem ('key');
+                 //localStorage.setItem ('key', 'value');
+                 //localStorage.getItem ('key');
                  //console.log(localStorage);
                  //console.log(key);
                  //console.log(value);
@@ -131,24 +138,43 @@
                  //inputValue.innerHTML += '${key}: ${value}';
                  //console.log(key)
              //}
-        //});
+
+             
+    
+        });
          console.log(moment())
 
          let m = moment();
          $("#datetime").html(m.format("MM/DD/YYYY, h:mm a"));
        
-         //$('.hour').forEach(); {
-             //var displayHour 
-             //let currentHour = moment();
-             //$(".hour").html(currentHour.format("h"))
+         function updateBackground() {
+             var
+             hr = (new Date()).getHours(),
+             body = document.body,
+             bstyle = body.style
+             dailyhr = document.querySelector(".row");
 
+             if (hr < 10) {
+                 bstyle.backgroundColor = "grey"
+                 }
 
-            
-        // }
+             else if (hr < 20) {
+                 bstyle.backgroundColor = "red";
+             }
+
+             else {
+                 bstyle.backgroundColor = "green"
+             }
+         }
+
+         setInterval(updateBackground, 1000 * 60);
+         updateBackground();
+         
          
         console.log(m.toString());
         
-        
+        // I could change the color of the background of the body but not the color of the rows of the hours.
+        // not sure what i did wrong 
      
 
     </script>
